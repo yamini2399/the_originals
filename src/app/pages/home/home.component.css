@@ -171,7 +171,7 @@
   .logo-track {
     display: flex;
     width: max-content;
-    animation: scroll-left 15s linear infinite; /* fast */
+    animation: scroll-left 7.5s linear infinite; /* ↑ twice as fast */
   }
   
   .logo-item {
