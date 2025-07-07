@@ -41,6 +41,11 @@
       
         <li><a routerLink="/careers"  (click)="closeMobileMenu()">Careers</a></li>
         <li><a routerLink="/updates"  (click)="closeMobileMenu()">Updates</a></li>
+
+        <!-- Contact link shown only on mobile -->
+        <li class="mobile-contact">
+          <a routerLink="/contact" class="mobile-contact-btn" (click)="closeMobileMenu()">Contact</a>
+        </li>
       </ul>
       
   

@@ -1,0 +1,308 @@
+.about-page {
+    font-family: 'Poppins', sans-serif;
+  }
+
+/* Common video + overlay */
+.video-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: black;
+  }
+  
+  .video-bg {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .play-button {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .play-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .watch-text {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .watch-text {
+      display: block;
+    }
+  }
+  
+  /* Intro */
+.intro-section {
+    padding: 60px 5vw;
+    background: white;
+  }
+  
+  .intro-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .intro-left,
+  .intro-right {
+    flex: 1 1 45%;
+  }
+  
+  .intro-left h1 {
+    font-size: 3.0rem;
+    font-weight: 700;
+    margin-top: 0px
+  }
+  
+  .intro-right p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #252424;
+  }
+  
+  /* Responsive tweak */
+  @media (max-width: 768px) {
+    .intro-wrapper {
+      flex-direction: column;
+    }
+  
+    .intro-left,
+    .intro-right {
+      flex: 1 1 100%;
+    }
+  
+    .intro-left h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  
+  /* Carousel */
+  .carousel-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 40px 5vw;
+  }
+  
+  .carousel-wrapper img {
+    max-width: 300px;
+    flex-shrink: 0;
+    border-radius: 8px;
+  }
+  
+  /* Cultural Power Section */
+  .cultural-pwr-section {
+    padding: 80px 5vw;
+  }
+  
+  .cultural-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 60px;
+  }
+  
+  .cultural-left {
+    flex: 1 1 40%;
+  }
+  
+  .cultural-left h2 {
+    font-size: 100px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0;
+    word-break: break-word;
+  }
+  
+  .cultural-left h2 span {
+    display: block;
+  }
+  
+  .cultural-right {
+    flex: 1 1 55%;
+  }
+  
+  .cultural-right p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    font-weight: 500;
+    color: #252424;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .cultural-wrapper {
+      flex-direction: column;
+    }
+  
+    .cultural-left h2 {
+      font-size: 60px;
+      font-weight: 1000;
+    }
+  
+    .cultural-right p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .bg-yellow {
+    background-color: #ffe100;
+  }
+  
+  .bg-gray {
+    background-color: #f5f5f5;
+  }
+  
+  /* Info Sections */
+  .info-section {
+    padding: 60px 5vw;
+  }
+  
+  .info-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .info-section h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .info-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  /* Leadership Cards */
+  .leadership-section {
+    padding: 60px 5vw;
+  }
+  
+  .leadership-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  
+  .leader-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+  }
+  
+  .leader-card {
+    text-align: center;
+  }
+  
+  .leader-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .leader-card h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .leader-card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+
+/* === Auto‑scroll Marquee === */
+.about-carousel {
+    overflow: hidden;          /* hide scrollbar */
+    padding: 2rem 0;
+    background: #fff;
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 2rem;
+    /* The trick: move the whole track left forever */
+    animation: scroll-left 25s linear infinite;
+  }
+  
+  .carousel-img {
+    width: 25vw;               /* responsive width */
+    max-width: 280px;
+    flex-shrink: 0;
+    border-radius: 12px;
+  }
+  
+  /* Keyframes: translate the width of one full image‑set */
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  /* Optional responsive tweak */
+  @media (max-width: 768px) {
+    .carousel-img {
+      width: 60vw;
+    }
+  }
+  
+  
+  .leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: #f7f7f7;
+  }
+  
+  .leader-card {
+    text-align: center;
+  }
+  
+  .leader-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  

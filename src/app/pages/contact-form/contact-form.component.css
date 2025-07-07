@@ -10,21 +10,6 @@
     flex-wrap: nowrap;
   }
   
-  .contact-image {
-    flex: 1 1 50%;
-  }
-  
-  .contact-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    display: block;
-    opacity: 0.98; /* slight transparency only */
-    margin-top: -105px;
-    margin-left: 0;
-  }
-  
   .contact-form {
     flex: 1 1 50%;
     max-width: 520px; /* Reduced from 500px */
@@ -111,19 +96,14 @@
   
     .contact-form h2 {
       font-size: 40px;
-    }
-  
-    .contact-image {
-        display: none; /* ✅ hide image on mobile */
-      }
-      
+    }      
     .contact-form {
       flex: 1 1 100%;
       width: 100%;
     }
   }
   
-  form,
+  /* form,
 input,
 select,
 textarea,
@@ -131,4 +111,4 @@ button,
 .contact-form .required-note,
 .checkbox label {
   font-family: 'Space Grotesk', Arial;
-}
+} */

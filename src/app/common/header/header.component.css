@@ -11,7 +11,12 @@
     background: #fff;
     font-family: 'Poppins', sans-serif;
     flex-wrap: wrap;
+
+    position: relative;   /* creates a stacking context */
+    z-index: 1000;        /* higher than your video’s z‑index (0‑2) */
   }
+  /* Default: hide the mobile button */
+  .mobile-contact { display: none; }
   
   .logo {
     display: flex;
@@ -134,7 +139,7 @@
     min-width: 180px;
     background: #fff;
     list-style: none;
-    padding: 12px 0;
+    padding: 10px 0;
     margin: 0;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     display: none;                 /* hidden by default */
@@ -169,11 +174,16 @@
       flex-direction: column;
       width: 100%;
       display: none;               /* hidden until hamburger click */
-      margin-top: 16px;
     }
+
+    
   
     /* show when navbar itself has .open (Angular flag) */
     .navbar.open .nav-links { display: flex; }
+
+    .navbar.open .nav-links{
+      background:#fff;        /* keeps text readable over video */
+    }
   
     .menu-toggle { display: flex; }
   
@@ -189,3 +199,64 @@
     .caret { display: none; }      /* hide arrow on mobile for cleaner look */
   }
   
+
+  /* ==========  MOBILE fine‑tuning  ========== */
+@media (max-width: 768px) {
+
+  .navbar.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 72px;                 /* height of the navbar */
+    width: 100%;
+    z-index: 999;
+    margin-top: 0;
+    padding: 0 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.10);
+
+    left: 64px;          /* 64‑px gap from left  (adjust if you want more/less) */
+    right: 0;            /* anchor to the right edge */
+    width: auto;         /* allow it to size from right edge */
+    max-width: 80%;      /* optional: never wider than 80 % of viewport */
+  }
+
+  .navbar {
+    position: fixed;          /* keeps navbar + dropdown fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .caret{
+    display:inline-block;      /* restore arrow */
+  }
+
+  /* 1.  Add left/right padding so items don’t hug the screen edge */
+  .nav-links {                                   /* the slide‑down panel  */
+    padding: 0 24px;                             /* same as desktop bar  */
+  }
+
+  /* 2.  Make every primary link look identical (a + button) */
+  .nav-links li a,
+  .nav-links .drop-btn {
+    display: block;           /* full‑width tap target          */
+    padding: 12px 0;          /* vertical rhythm                */
+    font-weight: 600;         /* match other links’ weight      */
+    text-align: left;
+    width: 100%;
+  }
+
+  /* 3.  Optional: indent submenu items a little more than now */
+  .dropdown-menu {
+    padding-left: 32px;       /* submenu indent                 */
+  }
+
+  /* Hide desktop button */
+  .contact-btn { display: none; }
+
+  /* Show the mobile version */
+  .mobile-contact {
+    display: block;
+  }
+}
