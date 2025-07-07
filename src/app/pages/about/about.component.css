@@ -97,6 +97,10 @@
     .intro-left h1 {
       font-size: 2rem;
     }
+
+    .intro-right {
+      margin-top: -60px; /* adjust as needed */
+    }
   }
   
   
@@ -114,59 +118,65 @@
     border-radius: 8px;
   }
   
-  /* Cultural Power Section */
-  .cultural-pwr-section {
+  /* original Power Section */
+  .original-pwr-section {
     padding: 80px 5vw;
   }
   
-  .cultural-wrapper {
+  .original-wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 60px;
+    justify-content: space-between; /* ensures space distribution */
+    gap: 20px;
   }
   
-  .cultural-left {
-    flex: 1 1 40%;
+  .original-left {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+
+  .original-right {
+    flex: 1 1 50%;
+    min-width: 300px;
   }
   
-  .cultural-left h2 {
+  .original-left h2 {
     font-size: 100px;
     font-weight: 1000;
     text-transform: uppercase;
-    line-height: 1.1;
+    line-height: 0.9;
     margin: 0;
     word-break: break-word;
+    letter-spacing: -2px;
   }
   
-  .cultural-left h2 span {
+  .original-left h2 span {
     display: block;
   }
   
-  .cultural-right {
-    flex: 1 1 55%;
+  .original-right p {
+    font-size: 1.3rem;
+    line-height: 2;
+    color: #000; /* darker text */
+    font-weight: 500;
   }
   
-  .cultural-right p {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    font-weight: 500;
-    color: #252424;
-    margin-bottom: 1.5rem;
-  }
   
   @media (max-width: 768px) {
-    .cultural-wrapper {
+    .original-wrapper {
       flex-direction: column;
     }
   
-    .cultural-left h2 {
+    .original-left h2 {
       font-size: 60px;
-      font-weight: 1000;
+      letter-spacing: -1px;
+      line-height: 1;
     }
   
-    .cultural-right p {
+    .original-right p {
       font-size: 1.1rem;
+      line-height: 1.7;
     }
   }
   
@@ -178,66 +188,138 @@
     background-color: #f5f5f5;
   }
   
-  /* Info Sections */
+  /* Info Section */
   .info-section {
-    padding: 60px 5vw;
+    padding: 60px 7vw;
+    background: white;
   }
   
   .info-wrapper {
     display: flex;
     gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
   }
   
-  .info-section h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  .info-left,
+  .info-right {
+    flex: 1 1 45%;
   }
   
-  .info-link {
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #000;
+  .info-left h1 {
+    font-size: 3.0rem;
+    font-weight: 700;
+    margin-top: 0px
   }
   
-  /* Leadership Cards */
-  .leadership-section {
-    padding: 60px 5vw;
+  .info-right p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #252424;
   }
   
-  .leadership-section h4 {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    font-weight: bold;
+  /* Responsive tweak */
+  @media (max-width: 768px) {
+    .info-wrapper {
+      flex-direction: column;
+    }
+  
+    .info-left,
+    .info-right {
+      flex: 1 1 100%;
+    }
+  
+    .info-left h1 {
+      font-size: 2rem;
+    }
+
+    .info-right {
+      margin-top: -60px; /* adjust as needed */
+    }
   }
   
+
+  /* ========================================
+   Yellow gradient background for info‑section
+   ======================================== */
+.bg-yellow-gradient {
+  /* soft yellow – tweak the two stops to taste */
+  background: linear-gradient(135deg, #ffe10014 0%, #e9d734 100%);
+  /* make sure the top padding doesn’t disappear into the previous section */
+  padding: 60px 5vw;
+}
+
+/* optional: better contrast for large yellow areas */
+.bg-yellow-gradient .info-left h1,
+.bg-yellow-gradient .info-right p {
+  color: #000;  /* keep text dark */
+}
+  
+/* ----- Leadership Layout & Styling ----- */
+.leadership-section {
+  padding: 80px 5vw;
+  background: #f0efec;
+}
+
+/* BIG, BOLD, DESIGN FONT */
+.leadership-title {
+  font-size: clamp(3rem, 4vw, 8rem); /* fluid between 3rem ➜ 8rem */
+  font-weight: 1000;                 /* ultra‑bold */
+  margin: 0 0 4rem 0;
+  line-height: 0.9;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+/* grid: exactly 3 cards, centred */
+.leader-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1000px;   /* keep the row from stretching too wide */
+  margin: 0 auto;      /* horizontally centre the whole grid */
+}
+
+/* card styling */
+.leader-card {
+  text-align: center;
+}
+
+.leader-img {
+  width: 750%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.leader-card h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.leader-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+/* ------------ Mobile tweak ------------ */
+@media (max-width: 768px) {
   .leader-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr;   /* stack vertically */
+    gap: 24px;
   }
-  
-  .leader-card {
-    text-align: center;
+
+  .leadership-title {
+    font-size: 2.5rem;
   }
-  
-  .leader-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 16px;
-  }
-  
-  .leader-card h5 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  
-  .leader-card p {
-    font-size: 0.9rem;
-    color: #555;
-  }
+}
+
   
 
 /* === Auto‑scroll Marquee === */
@@ -295,14 +377,5 @@
     margin-bottom: 1rem;
   }
   
-  h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-  
-  p {
-    font-size: 0.9rem;
-    color: #555;
-  }
+ 
   

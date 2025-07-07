@@ -1,5 +1,6 @@
 .site-footer {
-  background-color: #ffd600;
+  /* background-color: #ffd600; */
+  background: linear-gradient(180deg, #ffe1008f  0%, #ffd600 100%);
   color: #000;
   padding: 60px 5vw;
   font-family: 'Inter', sans-serif;

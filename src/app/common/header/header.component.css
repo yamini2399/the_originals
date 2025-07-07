@@ -61,6 +61,10 @@
     margin: 0;
     padding: 0;
   }
+
+  .nav-links li{
+    font-weight: 500;
+  }
   
   .nav-links li a,
   .drop-btn {
@@ -238,7 +242,7 @@
   }
 
   /* 2.  Make every primary link look identical (a + button) */
-  .nav-links li a,
+  .nav-links li a:not(.mobile-contact-btn),
   .nav-links .drop-btn {
     display: block;           /* full‑width tap target          */
     padding: 12px 0;          /* vertical rhythm                */
@@ -258,5 +262,28 @@
   /* Show the mobile version */
   .mobile-contact {
     display: block;
+    padding: 12px 0;
+  }
+  
+  .mobile-contact-btn {
+    background: #000;
+    color: #fff !important;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    width: auto; /* <<< THIS IS KEY */
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  
+  
+  /* slight hover/active feedback */
+  .mobile-contact-btn:hover,
+  .mobile-contact-btn:active {
+    background: #333;
   }
 }

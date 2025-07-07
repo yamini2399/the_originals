@@ -346,6 +346,7 @@
       flex-direction: column-reverse; /* Image appears below form in HTML, but above visually */
       align-items: stretch; /* Optional: let items take full width */
       gap: 30px;
+      margin-top: -130px;
     }
   
     .contact-image img {
@@ -356,3 +357,4 @@
       border-radius: 12px;
     }
   }
+  
