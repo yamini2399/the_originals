@@ -1,3 +1,16 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .hero-section {
     position: relative;
     width: 100%;
@@ -320,54 +333,65 @@
   }
   
   .home-contact-section {
+    position: relative;
     display: flex;
     flex-direction: row;
-    gap: 60px;
     padding: 60px 5vw;
     background-color: #fff;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 600px;
+    overflow: hidden;
   }
   
-  .contact-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 12px;
+  .contact-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 60%;
     object-fit: cover;
+    z-index: 0;
   }
   
+  /* Overlay layer that contains the form */
+  .contact-overlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 565px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* The wrapper helps contain the form inside nicely */
   .contact-form-wrapper {
-    flex: 1;
+    width: 100%;
   }
   
   @media (max-width: 768px) {
     .home-contact-section {
-      flex-direction: column-reverse; /* Image appears below form in HTML, but above visually */
-      align-items: stretch; /* Optional: let items take full width */
-      gap: 30px;
-      margin-top: -130px;
+      flex-direction: column;
+      padding: 40px 5vw;
     }
   
-    .contact-image img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
+    .contact-bg {
+      position: relative; /* ⬅️ make it behave like a regular inline image */
+      width: 200%;
+      height: 200px;       /* ⬅️ reduce height for smaller appearance */
       object-fit: cover;
       border-radius: 12px;
+      margin-bottom: 20px; /* space between image and form */
+      z-index: 0;
+    }
+  
+    .contact-overlay {
+      width: 100%;
+      max-width: 100%;
+      padding: 30px;
+      border-radius: 8px;
+      backdrop-filter: none; /* optional: disable blur on mobile for performance */
+      background: rgba(255, 255, 255, 0.95); /* optional: solid background */
     }
   }
-  
-  .reveal {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: opacity 1s ease, transform 1s ease;
-    will-change: opacity, transform;
-  }
-  
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
   
