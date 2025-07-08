@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 
 
@@ -8,7 +9,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   mobileOpen = false;
-  servicesOpen = false;   // NEW
+  servicesOpen = false;
+
+  constructor(private viewportScroller: ViewportScroller){}
 
   toggleMobileMenu(): void {
     this.mobileOpen = !this.mobileOpen;
@@ -21,5 +24,9 @@ export class HeaderComponent {
 
   toggleServices(): void {     // NEW
     this.servicesOpen = !this.servicesOpen;
+  }
+
+  scrollToTop(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
   }
 }

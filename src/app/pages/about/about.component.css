@@ -49,7 +49,13 @@
       display: block;
     }
   }
-  
+
+  @media (max-width: 768px) {
+    .hero-section:first-of-type {
+      margin-top: 80px;
+    }
+  }
+
   /* Intro */
 .intro-section {
     padding: 60px 5vw;
@@ -128,7 +134,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between; /* ensures space distribution */
-    gap: 20px;
+    gap: 50px;
   }
   
   .original-left {
@@ -139,6 +145,7 @@
   .original-right {
     flex: 1 1 50%;
     min-width: 300px;
+    margin-top: -26px;
   }
   
   .original-left h2 {
@@ -202,23 +209,36 @@
     flex-wrap: wrap;
   }
   
-  .info-left,
+  .info-left{
+    flex: 1 1 45%;
+  }
+
   .info-right {
     flex: 1 1 45%;
+    max-width: 565px; /* 👈 This limits the form width */
   }
   
   .info-left h1 {
-    font-size: 3.0rem;
-    font-weight: 700;
+    font-size: 6rem;
+    font-weight: 900;
     margin-top: 0px
   }
   
-  .info-right p {
+  /* .info-right p {
     font-size: 1.3rem;
     line-height: 1.7;
     margin-bottom: 1rem;
     font-weight: 500;
     color: #252424;
+  } */
+
+  .info-right app-contact-form {
+    width: 100%;
+    max-height: 500px; /* Limit overall form height */
+    overflow: auto;    /* Add scroll if needed */
+    padding: 10px;
+    transform: scale(0.95);
+    transform-origin: top left;
   }
   
   /* Responsive tweak */
@@ -227,17 +247,27 @@
       flex-direction: column;
     }
   
-    .info-left,
+    /* .info-left,
     .info-right {
+      flex: 1 1 100%;
+    } */
+
+    .info-left {
       flex: 1 1 100%;
     }
   
     .info-left h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     .info-right {
       margin-top: -60px; /* adjust as needed */
+    }
+
+    .info-right {
+      max-width: 100%;
+      transform: scale(1); /* reset on mobile if needed */
+      margin-top: -60px;
     }
   }
   
@@ -252,11 +282,6 @@
   padding: 60px 5vw;
 }
 
-/* optional: better contrast for large yellow areas */
-.bg-yellow-gradient .info-left h1,
-.bg-yellow-gradient .info-right p {
-  color: #000;  /* keep text dark */
-}
   
 /* ----- Leadership Layout & Styling ----- */
 .leadership-section {
@@ -389,4 +414,26 @@
   .reveal.active {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .original-left h5 {
+    font-size: 58px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    line-height: 0.9;
+    margin: 0;
+    word-break: break-word;
+    letter-spacing: -2px;
+  }
+  
+  .original-left h5 span {
+    display: block;
+  }
+
+  @media (max-width: 768px) {  
+    .original-left h5 {
+      font-size: 30px;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
   }
