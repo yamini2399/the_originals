@@ -18,9 +18,10 @@
     <ul class="nav-links">
         <li><a routerLink="/works"    (click)="closeMobileMenu(); scrollToTop()">Works</a></li>
         <li><a routerLink="/about"    (click)="closeMobileMenu(); scrollToTop()">About</a></li>
+        <li><a routerLink="/services"    (click)="closeMobileMenu(); scrollToTop()">Services</a></li>
       
         <!-- ▼▼  Services → dropdown  ▼▼ -->
-        <li class="dropdown" [class.open]="servicesOpen">
+        <!-- <li class="dropdown" [class.open]="servicesOpen">
             <button
               class="drop-btn"
               aria-haspopup="true"
@@ -36,7 +37,7 @@
               <li><a routerLink="/services/marketing"   (click)="closeMobileMenu(); scrollToTop()">Marketing</a></li>
             </ul>
           </li>
-          
+           -->
         <!-- ▲▲  end Services dropdown ▲▲ -->
       
         <li><a routerLink="/careers"  (click)="closeMobileMenu(); scrollToTop()">Careers</a></li>
