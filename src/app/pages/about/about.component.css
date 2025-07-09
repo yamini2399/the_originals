@@ -291,30 +291,31 @@
 
 /* BIG, BOLD, DESIGN FONT */
 .leadership-title {
-  font-size: clamp(3rem, 4vw, 8rem); /* fluid between 3rem ➜ 8rem */
-  font-weight: 1000;                 /* ultra‑bold */
+  font-size: clamp(3rem, 4vw, 8rem);
+  font-weight: 1000;
   margin: 0 0 4rem 0;
   line-height: 0.9;
   letter-spacing: -1px;
-  text-transform: uppercase;
+  word-spacing: 8px;
 }
+
 
 /* grid: exactly 3 cards, centred */
 .leader-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* responsive 4-per-row */
   gap: 40px;
-  max-width: 1000px;   /* keep the row from stretching too wide */
-  margin: 0 auto;      /* horizontally centre the whole grid */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* card styling */
+/* Card styling remains unchanged */
 .leader-card {
   text-align: center;
 }
 
 .leader-img {
-  width: 750%;
+  width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 8px;
@@ -333,10 +334,10 @@
   margin: 0;
 }
 
-/* ------------ Mobile tweak ------------ */
+/* Responsive: Stack on small screens */
 @media (max-width: 768px) {
   .leader-grid {
-    grid-template-columns: 1fr;   /* stack vertically */
+    grid-template-columns: 1fr;
     gap: 24px;
   }
 
@@ -344,6 +345,7 @@
     font-size: 2.5rem;
   }
 }
+
 
   
 
