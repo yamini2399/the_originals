@@ -1,0 +1,24 @@
+
+<div class="main-heading">
+    <h1>{{ data.heading }}</h1>
+</div>
+
+<div>
+    <video [src]="data.video_url" autoplay muted loop playsinline></video>
+</div>
+
+
+<!-- Services Sections -->
+<section class="services-section bg-white reveal">
+    <div class="services-left">
+        <h3 class="services-title">SERVICES</h3>
+        <ul class="services-list" *ngFor="let i of data.service_types">
+            <li><a [href]="i.url">{{ i.title }}</a></li>
+        </ul>
+    </div>
+    <div class="services-right">
+        <p class="services-description">
+            {{ data.description }}
+        </p>
+    </div>
+</section>

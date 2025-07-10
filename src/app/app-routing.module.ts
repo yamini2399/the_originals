@@ -8,8 +8,8 @@ import { CareersComponent } from './pages/careers/careers.component';
 import { UpdatesComponent } from './pages/updates/updates.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
-import { ServiceOverviewComponent } from './service-overview/service-overview.component';
-import { ServiceTypeComponent } from './service-type/service-type.component';
+import { ServiceOverviewComponent } from './pages/service-overview/service-overview.component';
+import { ServiceTypeComponent } from './pages/service-type/service-type.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

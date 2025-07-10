@@ -5,32 +5,38 @@
 
     <form #f="ngForm" (ngSubmit)="submit(f)" novalidate>
 
-      <!-- First Name -->
-      <div class="form-group" [class.invalid]="firstNameErr">
-        <label for="firstName">FIRST NAME*</label>
+      <!-- Full Name -->
+      <div class="form-group" [class.invalid]="fullNameErr">
+        <label for="fullName">FULL NAME*</label>
         <input
-          id="firstName"
-          name="firstName"
-          [(ngModel)]="firstName"
+          id="fullName"
+          name="fullName"
+          [(ngModel)]="fullName"
           type="text"
-          (focus)="removeErrorMsg('firstName')"
+          (focus)="removeErrorMsg('fullName')"
           inputmode="text" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '').replace(/\s{2,}/g, ' ');"
         />
-        <small *ngIf="firstNameErr=='required'" class="error">This field is required</small>
+        <small *ngIf="fullNameErr=='required'" class="error">This field is required</small>
       </div>
 
-      <!-- Last Name -->
-      <div class="form-group" [class.invalid]="lastNameErr">
-        <label for="lastName">LAST NAME*</label>
+      <!-- Mobile -->
+      <div class="form-group" [class.invalid]="mobileErr">
+        <label for="mobile">MOBILE</label>
         <input
-          id="lastName"
-          name="lastName"
-          [(ngModel)]="lastName"
+          id="mobile"
+          name="mobile"
+          [(ngModel)]="mobile"
           type="text"
-          (focus)="removeErrorMsg('lastName')"
-          inputmode="text" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '').replace(/\s{2,}/g, ' ');"
+          (focus)="removeErrorMsg('mobile')"
+          minlength="10"
+          maxlength="10"
+          pattern="[6789][0-9]{9}"
+          inputmode="numeric"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+          (keypress)="numbersOnly($event)"
         />
-        <small *ngIf="lastNameErr=='required'" class="error">This field is required</small>
+        <!-- <small *ngIf="mobileErr=='required'" class="error">This field is required</small> -->
+        <small *ngIf="mobileErr=='invalid'" class="error">Please enter a valid mobile</small>
       </div>
 
       <!-- Email -->
@@ -81,8 +87,8 @@
         <label>
           <input
             type="checkbox"
-            name="checkOne"
-            [(ngModel)]="checkOne"
+            name="commConsent"
+            [(ngModel)]="commConsent"
           />
           I agree to receive communications from TheOriginals.
         </label>

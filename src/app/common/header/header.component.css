@@ -62,6 +62,7 @@
     gap: 32px;
     margin: 0;
     padding: 0;
+    margin-left: -115px;
   }
 
   .nav-links li{
@@ -179,7 +180,8 @@
     .nav-links {
       flex-direction: column;
       width: 100%;
-      display: none;               /* hidden until hamburger click */
+      display: none;    
+      margin-left: 0;           /* hidden until hamburger click */
     }
 
     

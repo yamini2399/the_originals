@@ -340,6 +340,8 @@
     }
     .services-list {
       font-size: 16px;
+    }
+    .services-bottom{
       margin-top: -40px
     }
     .explore-link {

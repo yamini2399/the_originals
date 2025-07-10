@@ -19,126 +19,37 @@
         <a data-target="section-04"><span>Specialist Services</span></a>
     </nav>
   
-    <!-- Services Section 01 -->
-    <section class="services-section bg-white reveal" id="section-01">
+    <!-- Services Sections -->
+     <ng-container *ngFor="let item of data">
+      <section class="services-section bg-white reveal" [id]="item.section_id">
         <div class="services-top">
           <div class="services-number-title">
-            <h2 class="services-number">01</h2><br>
-            <h3 class="services-title">Marketing + Communications</h3>
+            <h2 class="services-number">{{ item.id }}</h2><br>
+            <h3 class="services-title">{{ item.heading }}</h3>
           </div>
           <p class="services-description">
-            We don’t just market. We build presence, perception, and pull.
-            Our services are designed to help brands connect deeply, communicate clearly,
-            and convert consistently — across every channel that matters.
+            {{ item.description }}
           </p>
         </div>
       
         <div class="services-bottom">
           <div class="services-list-section">
-            <ul class="services-list">
-              <li><a href="/services/marketing-communications/brand-and-communications">Brand Strategy & Campaign Planning</a></li>
-              <li><a href="/services/marketing-communications/advertising-content">Advertising & Creative Content</a></li>
-              <li><a href="/services/marketing-communications/social-media-creator-marketing">Social Media Management & Creator Marketing</a></li>
-              <li><a href="/services/marketing-communications/pr-communications-reputation">Public Relations & Reputation Management</a></li>
-              <li><a href="/services/marketing-communications/experiential-marketing-events">Experiential Marketing & Events</a></li>
-              <li><a href="/services/marketing-communications/branding-design">Brand Identity & Visual Design</a></li>
-              <li><a href="/services/marketing-communications/production">Production – Film, Photo & Digital</a></li>
+            <ul class="services-list" *ngFor="let i of item.service_types">
+              <li><a [href]="i.url">{{ i.title }}</a></li>
             </ul>
-            <a href="/services/marketing-communications" class="explore-link"><span>Explore Work</span></a>
+            <a [href]="item.explore_work" class="explore-link"><span>Explore Work</span></a>
           </div>
       
           <div class="services-video-section">
-            <video class="services-video" src="https://videos.ctfassets.net/teibi0nrv2xi/4Zsg4A9TanoaIN92CBXH66/e99db495272ed283de7975353ca52f75/Services_Marketing.mp4"
+            <video class="services-video" [src]="item.video_url"
               autoplay muted loop playsinline></video>
           </div>
         </div>
       </section>
-      
-      
-  
-<!-- Services Section 02 -->
-<section class="services-section bg-grey reveal" id="section-02">
-    <div class="services-top">
-      <div class="services-number-title">
-        <h2 class="services-number">02</h2>
-        <h3 class="services-title">Experience, Technology + Consulting</h3>
-      </div>
-      <p class="services-description">
-        We provide consulting and digital expertise to help brands unlock innovation through technology and experiences.
-      </p>
-    </div>
-  
-    <div class="services-bottom">
-      <div class="services-list-section">
-        <ul class="services-list">
-          <li><a href="/services/experience-technology-consulting/audience-insights">Audience Definition + Insights</a></li>
-          <li><a href="/services/experience-technology-consulting/data-analytics">Data, Analytics + Measurement</a></li>
-          <li><a href="/services/experience-technology-consulting/growth-innovation-consulting">Growth Strategy, Innovation + Consulting</a></li>
-          <li><a href="/services/experience-technology-consulting/design-loyalty">UX, CX Design, CRM + Loyalty</a></li>
-        </ul>
-        <a href="/services/experience-technology-consulting" class="explore-link"><span>Explore Work</span></a>
-      </div>
-      <div class="services-video-section">
-        <video class="services-video" src="https://videos.ctfassets.net/teibi0nrv2xi/3922KlfOKzR9W73ykZAXs4/9d59b3e37b9fbeb832d0d6e73fdee8a9/Experience_v3.mp4" autoplay muted loop playsinline></video>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Services Section 03 -->
-  <section class="services-section bg-white reveal" id="section-03">
-    <div class="services-top">
-      <div class="services-number-title">
-        <h2 class="services-number">03</h2>
-        <h3 class="services-title">Media + Sponsorship</h3>
-      </div>
-      <p class="services-description">
-        We create powerful media plans and partnerships that maximize impact across all platforms.
-      </p>
-    </div>
-  
-    <div class="services-bottom">
-      <div class="services-list-section">
-        <ul class="services-list">
-          <li><a href="/services/media-sponsorship/performance-media">Performance Marketing + Retail Media</a></li>
-          <li><a href="/services/media-sponsorship/sponsorship-partnership">Sponsorships, Partnerships + Rights Management</a></li>
-        </ul>
-        <a href="/services/media-sponsorship" class="explore-link"><span>Explore Work</span></a>
-      </div>
-      <div class="services-video-section">
-        <video class="services-video" src="https://videos.ctfassets.net/teibi0nrv2xi/1dsSQbnOKw2BBQJrobkrQB/0ef03890203126fe12f8e58294987261/Media_Sponsorship.mp4" autoplay muted loop playsinline></video>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Services Section 04 -->
-  <section class="services-section bg-grey reveal" id="section-04">
-    <div class="services-top">
-      <div class="services-number-title">
-        <h2 class="services-number">04</h2>
-        <h3 class="services-title">Specialist Services</h3>
-      </div>
-      <p class="services-description">
-        Our specialist teams bring niche expertise to address specific challenges with precision and insight.
-      </p>
-    </div>
-  
-    <div class="services-bottom">
-      <div class="services-list-section">
-        <ul class="services-list">
-          <li><a href="/services/specialist-services/talent-management">Talent Management</a></li>
-          <li><a href="/services/specialist-services/sports-entertainment">Sports + Entertainment</a></li>
-          <li><a href="/services/specialist-services/global-and-social-issues">Global + Social Issues</a></li>
-        </ul>
-        <a href="/services/specialist-services" class="explore-link"><span>Explore Work</span></a>
-      </div>
-      <div class="services-video-section">
-        <video class="services-video" src="https://videos.ctfassets.net/teibi0nrv2xi/4Uy4NgMx71ZZLKMwPWlDIn/47825c48fd04df2de3a42770e396782c/Talent.mp4" autoplay muted loop playsinline></video>
-      </div>
-    </div>
-  </section>
-  
+     </ng-container>
 
-
+      
+    <!-- contact -->
     <section class="home-contact-section contact-section reveal">
         <!-- Background Image -->
         <img src="../../../assets/reel2.jpeg" alt="Contact Us" class="contact-bg" />

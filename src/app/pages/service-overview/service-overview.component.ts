@@ -1,19 +1,20 @@
-import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
-  selector: 'app-services',
-  templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  selector: 'app-service-overview',
+  templateUrl: './service-overview.component.html',
+  styleUrls: ['./service-overview.component.css']
 })
-export class ServicesComponent implements AfterViewInit  {
+export class ServiceOverviewComponent implements AfterViewInit {
 
-  data: any[] = [];
+  data: any;
 
-  constructor(private dataService: DataService, private el: ElementRef) {
-    this.data = this.dataService.data;
+  constructor(private route: ActivatedRoute, private dataService: DataService, private el: ElementRef) {
+    var slug = this.route.snapshot.paramMap.get('title')
+    this.data = this.dataService.data.find(d => d.page == slug);
   }
-
 
   ngAfterViewInit(): void {
     // reveal
@@ -47,4 +48,5 @@ export class ServicesComponent implements AfterViewInit  {
       });
     });    
   }
+
 }

@@ -1,0 +1,11 @@
+<div class="main-heading">
+    <h1>{{ data.title }}</h1>
+  </div>
+  
+  <div class="media-description-row ">
+    <div class="video-col">
+      <video [src]="data.video_url" autoplay muted loop playsinline></video>
+    </div>
+    <div class="desc-col reveal" [innerHtml]="data.desc"></div>
+  </div>
+  
