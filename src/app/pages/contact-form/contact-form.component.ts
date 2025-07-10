@@ -42,8 +42,8 @@ export class ContactFormComponent {
     // if(!this.mobile){
     //   this.mobileErr='required';
     //   num += 1;
-    // }  
-    if(this.mobile && this.isMobileWrong() == 0){
+    // } 
+    if(this.mobile && (this.mobile.length<10 || this.isMobileWrong() == 0)){
       this.mobileErr='invalid';
       num += 1;
     }

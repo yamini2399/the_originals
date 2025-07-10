@@ -1,3 +1,5 @@
+<div class="contact-form-container">
+
 <div class="contact-section">
   <div class="contact-form" id="contact-form">
     <h2>LET'S TALK</h2>
@@ -19,6 +21,20 @@
         <small *ngIf="fullNameErr=='required'" class="error">This field is required</small>
       </div>
 
+      <!-- Email -->
+      <div class="form-group" [class.invalid]="emailErr">
+        <label for="email">EMAIL*</label>
+        <input
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          type="text"
+          (focus)="removeErrorMsg('email')"
+        />
+        <small *ngIf="emailErr=='required'" class="error">This field is required</small>
+        <small *ngIf="emailErr=='invalid'" class="error">Please enter a valid email address</small>
+      </div>
+
       <!-- Mobile -->
       <div class="form-group" [class.invalid]="mobileErr">
         <label for="mobile">MOBILE</label>
@@ -37,20 +53,6 @@
         />
         <!-- <small *ngIf="mobileErr=='required'" class="error">This field is required</small> -->
         <small *ngIf="mobileErr=='invalid'" class="error">Please enter a valid mobile</small>
-      </div>
-
-      <!-- Email -->
-      <div class="form-group" [class.invalid]="emailErr">
-        <label for="email">EMAIL*</label>
-        <input
-          id="email"
-          name="email"
-          [(ngModel)]="email"
-          type="text"
-          (focus)="removeErrorMsg('email')"
-        />
-        <small *ngIf="emailErr=='required'" class="error">This field is required</small>
-        <small *ngIf="emailErr=='invalid'" class="error">Please enter a valid email address</small>
       </div>
 
       <!-- Contact Reason (optional) -->
@@ -119,4 +121,5 @@
     <h1>THANKS!</h1>
     <h3>We'll get back to you soon.</h3>
   </div>
+</div>
 </div>

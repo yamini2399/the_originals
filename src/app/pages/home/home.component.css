@@ -361,6 +361,7 @@
     width: 100%;
     max-width: 565px;
     backdrop-filter: blur(6px);
+    background-color: white;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   }
   

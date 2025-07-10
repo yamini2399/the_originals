@@ -91,7 +91,7 @@ export class DataService {
           url: "/services/experience-technology-consulting/audience-insights",
           desc: "<p>Leveraging our diverse data stack, we create powerful audience understanding - uncovering deep audience behaviors and cultural drivers to identify how to authentically connect with real people for real growth.</p>",
           video_url:"",
-          image_url:"https://mcsaatchi.com/_next/image?url=https%3A%2F%…de4731d817dadd2d83a1f%2FMacalllan.jpg&w=1920&q=75"
+          image_url:"https://giggster.com/images/location/07689dd1-d6e5-4a60-bccc-26eee2eb04f3/135d9adf-fb6f-4e16-8e76-e3fe8d816b9f.jpg?width=720&height=514&fit=crop&dpr=1.4&format=webply"
         },
         {
           page: "data-analytics",
@@ -99,7 +99,7 @@ export class DataService {
           url: "/services/experience-technology-consulting/data-analytics",
           desc: "<p>We don’t just collect data—we make it work. Powered by AI and advanced analytics, we transform raw information into predictive intelligence and real-time measurement that fuels smarter decisions.</p>",
           video_url:"",
-          image_url:"https://mcsaatchi.com/_next/image?url=https%3A%2F%…a9a5789991049312%2FUKGov-unsplash.jpg&w=3840&q=75"
+          image_url:"https://mirrorpictures.in/wp-content/uploads/2023/03/istockphoto-1165055006-612x612-1.jpg"
         },
         {
           page: "growth-innovation-consulting",
