@@ -14,6 +14,8 @@ import { CareersComponent } from './pages/careers/careers.component';
 import { UpdatesComponent } from './pages/updates/updates.component';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { ServiceOverviewComponent } from './service-overview/service-overview.component';
+import { ServiceTypeComponent } from './service-type/service-type.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ServicesComponent } from './pages/services/services.component';
     CareersComponent,
     UpdatesComponent,
     ContactFormComponent,
-    ServicesComponent
+    ServicesComponent,
+    ServiceOverviewComponent,
+    ServiceTypeComponent
   ],
   imports: [
     BrowserModule,

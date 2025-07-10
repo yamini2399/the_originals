@@ -190,12 +190,14 @@
     font-weight: 500;
     padding-left: 0;
   }
-  .services-list li span {
+  .services-list li a {
     display: inline-block;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
+    color:#000
   }
-  .services-list li span::after {
+  .services-list li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -205,7 +207,7 @@
     background-color: currentColor;
     transition: width 0.3s ease-in-out;
   }
-  .services-list li span:hover::after {
+  .services-list li a:hover::after {
     width: 100%;
   }
   .explore-link {
