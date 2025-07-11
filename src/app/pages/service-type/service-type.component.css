@@ -60,6 +60,12 @@
     max-height: 500px;
     object-fit: cover;
   }
+
+  img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
   
   /* Responsive: stack on small screens */
   @media (max-width: 768px) {
