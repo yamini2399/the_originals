@@ -7,7 +7,31 @@ export class DataService {
 
   constructor() { }
 
+  services = [
+    {
+      name: "MARKETING + COMMUNICATIONS",
+      url: "marketing-communications",
+      section_id: "section-01"
+    },
+    {
+      name: "EXPERIENCE, TECHNOLOGY + CONSULTING",
+      url: "experience-technology-consulting",
+      section_id: "section-02"
+    },
+    {
+      name: "MEDIA + SPONSORSHIP",
+      url: "media-sponsorship",
+      section_id: "section-03"
+    },
+    {
+      name: "SPECIALIST SERVICES",
+      url: "specialist-services",
+      section_id: "section-04"
+    }
+  ]
+
   data = [
+    // 01
     {
       page:"marketing-communications",
       id:"01",
@@ -76,6 +100,7 @@ export class DataService {
       ],
       explore_work:"/services/marketing-communications"
     },
+    // 02
     {
       page:"experience-technology-consulting",
       id:"02",
@@ -120,6 +145,7 @@ export class DataService {
       ],
       explore_work:"/services/experience-technology-consulting"
     },
+    // 03
     {
       page:"media-sponsorship",
       id:"03",
@@ -149,6 +175,7 @@ export class DataService {
       ],
       explore_work:"/services/media-sponsorship"
     },
+    // 04
     {
       page:"specialist-services",
       id:"04",
@@ -185,7 +212,117 @@ export class DataService {
       ],
       explore_work:"/services/specialist-services"
     }
-    
+  ]
+
+  work = [
+    // 01
+    {
+      service_name:"marketing-communications",
+      types: [
+        "Brand and Communications Strategy + Planning",
+        "Advertising + Content",
+        "Social Media + Creator Marketing",
+        "PR, Communications + Reputation",
+        "Experiential Marketing + Events",
+        "Brand Identity & Visual Design",
+        "Production – Film, Photo & Digital"
+      ],
+      media :[
+        {
+          brand: "JAMESON",
+          title: "Pioneering a new sound frontier",
+          image: "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s",
+        },
+        {
+          brand: "JAMESON",
+          title: "Pioneering a new sound frontier",
+          image: "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s",
+        },
+        {
+          brand: "JAMESON",
+          title: "Pioneering a new sound frontier",
+          image: "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s",
+        }
+      ]
+    },
+    // 02
+    {
+      service_name:"experience-technology-consulting",
+      types: [
+        "Audience Definition + Insights",
+        "Data, Analytics + Measurement",
+        "Growth Strategy, Innovation + Consulting",
+        "UX, CX Design, CRM + Loyalty"
+      ],
+      media :[
+          {
+            "brand": "AUSTRALIAN RED CROSS LIFEBLOOD",
+            "title": "Turning motivational stories into a powerful call to action",
+            "image": "https://media.istockphoto.com/id/1276936264/photo/creative-background-online-casino-in-a-mans-hand-a-smartphone-with-playing-cards-roulette-and.jpg?s=1024x1024&w=is&k=20&c=I7X3V_gVoNP3s3Oh6KUDpCXKd48qsKfbaH3YhNpAmho=",
+          },
+          {
+            "brand": "AUSTRALIAN RED CROSS LIFEBLOOD",
+            "title": "Turning motivational stories into a powerful call to action",
+            "image": "https://media.istockphoto.com/id/1276936264/photo/creative-background-online-casino-in-a-mans-hand-a-smartphone-with-playing-cards-roulette-and.jpg?s=1024x1024&w=is&k=20&c=I7X3V_gVoNP3s3Oh6KUDpCXKd48qsKfbaH3YhNpAmho=",
+          },
+          {
+            "brand": "AUSTRALIAN RED CROSS LIFEBLOOD",
+            "title": "Turning motivational stories into a powerful call to action",
+            "image": "https://media.istockphoto.com/id/1276936264/photo/creative-background-online-casino-in-a-mans-hand-a-smartphone-with-playing-cards-roulette-and.jpg?s=1024x1024&w=is&k=20&c=I7X3V_gVoNP3s3Oh6KUDpCXKd48qsKfbaH3YhNpAmho=",
+          }
+        ]
+    },
+    // 03
+    {
+      service_name:"media-sponsorship",
+      types: [
+        "Performance Marketing + Retail Media",
+        "Sponsorships, Partnerships + Rights Management"
+      ],
+      media :[
+        {
+          "brand": "THE NORTH FACE",
+          "title": "Reinforcing leadership in the outdoors",
+          "image": "https://fastly.picsum.photos/id/54/3264/2176.jpg?hmac=blh020fMeJ5Ru0p-fmXUaOAeYnxpOPHnhJojpzPLN3g",
+        },
+        {
+          "brand": "THE NORTH FACE",
+          "title": "Reinforcing leadership in the outdoors",
+          "image": "https://fastly.picsum.photos/id/54/3264/2176.jpg?hmac=blh020fMeJ5Ru0p-fmXUaOAeYnxpOPHnhJojpzPLN3g",
+        },
+        {
+          "brand": "THE NORTH FACE",
+          "title": "Reinforcing leadership in the outdoors",
+          "image": "https://fastly.picsum.photos/id/54/3264/2176.jpg?hmac=blh020fMeJ5Ru0p-fmXUaOAeYnxpOPHnhJojpzPLN3g",
+        }
+      ]
+    },
+    // 04
+    {
+      service_name:"specialist-services",
+      types: [
+        "Talent Management",
+        "Sports + Entertainment",
+        "Global + Social Issues"
+      ],
+      media :[
+        {
+          "brand": "PELOTON",
+          "title": "From Klopp to communitites, refining fitness accessibility",
+          "image": "https://fastly.picsum.photos/id/41/1280/805.jpg?hmac=W9CWeYdlZisqEfhjuODl83T3lCXAqjUZrOe9iMFPYmI"
+        },
+        {
+          "brand": "PELOTON",
+          "title": "From Klopp to communitites, refining fitness accessibility",
+          "image": "https://fastly.picsum.photos/id/41/1280/805.jpg?hmac=W9CWeYdlZisqEfhjuODl83T3lCXAqjUZrOe9iMFPYmI"
+        },
+        {
+          "brand": "PELOTON",
+          "title": "From Klopp to communitites, refining fitness accessibility",
+          "image": "https://fastly.picsum.photos/id/41/1280/805.jpg?hmac=W9CWeYdlZisqEfhjuODl83T3lCXAqjUZrOe9iMFPYmI"
+        }
+      ]
+    },
   ]
 
 }

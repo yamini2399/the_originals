@@ -7,11 +7,12 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements AfterViewInit  {
-
+  services: any[] =[];
   data: any[] = [];
 
   constructor(private dataService: DataService, private el: ElementRef) {
     this.data = this.dataService.data;
+    this.services = this.dataService.services;
   }
 
 

@@ -13,10 +13,9 @@
   
     <!-- Sticky Tabs -->
     <nav class="service-tabs">
-        <a data-target="section-01"><span>Marketing + Communication</span></a>
-        <a data-target="section-02"><span>Experience, Technology + Consulting</span></a>
-        <a data-target="section-03"><span>Media + Sponsorship</span></a>
-        <a data-target="section-04"><span>Specialist Services</span></a>
+      <ng-container *ngFor="let item of services">
+        <a [attr.data-target]="item.section_id"><span>{{ item.name }}</span></a>
+      </ng-container>
     </nav>
   
     <!-- Services Sections -->

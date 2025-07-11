@@ -16,6 +16,9 @@
   
     <!-- desktop / off‑canvas menu -->
     <ul class="nav-links">
+        <li class="mobile-home">
+          <a routerLink="/" (click)="closeMobileMenu(); scrollToTop()">Home</a>
+        </li>
         <li><a routerLink="/works"    (click)="closeMobileMenu(); scrollToTop()">Works</a></li>
         <li><a routerLink="/about"    (click)="closeMobileMenu(); scrollToTop()">About</a></li>
         <li><a routerLink="/services"    (click)="closeMobileMenu(); scrollToTop()">Services</a></li>

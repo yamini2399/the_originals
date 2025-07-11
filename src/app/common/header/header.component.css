@@ -16,7 +16,18 @@
     z-index: 1000;        /* higher than your video’s z‑index (0‑2) */
   }
 
-  
+  /* Hide by default */
+.mobile-home {
+  display: none;
+}
+
+/* Show only in mobile view */
+@media (max-width: 768px) {
+  .mobile-home {
+    display: block;
+  }
+}
+
   /* Default: hide the mobile button */
   .mobile-contact { display: none; }
   

@@ -37,7 +37,7 @@
 
       <!-- Mobile -->
       <div class="form-group" [class.invalid]="mobileErr">
-        <label for="mobile">MOBILE</label>
+        <label for="mobile">MOBILE*</label>
         <input
           id="mobile"
           name="mobile"
@@ -51,14 +51,14 @@
           oninput="this.value = this.value.replace(/[^0-9]/g, '');"
           (keypress)="numbersOnly($event)"
         />
-        <!-- <small *ngIf="mobileErr=='required'" class="error">This field is required</small> -->
+        <small *ngIf="mobileErr=='required'" class="error">This field is required</small>
         <small *ngIf="mobileErr=='invalid'" class="error">Please enter a valid mobile</small>
       </div>
 
       <!-- Contact Reason (optional) -->
       <div class="form-group" [class.invalid]="contactReasonErr">
         <label for="reason">CONTACT REASON*</label>
-        <select
+        <select style="color: black;"
           id="reason"
           name="reason"
           [(ngModel)]="contactReason"

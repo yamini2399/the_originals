@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 
@@ -7,13 +7,19 @@ import { DataService } from 'src/app/services/data.service';
   templateUrl: './service-overview.component.html',
   styleUrls: ['./service-overview.component.css']
 })
-export class ServiceOverviewComponent implements AfterViewInit {
+export class ServiceOverviewComponent implements AfterViewInit, OnInit, OnDestroy {
 
   data: any;
+  work: any;
+
+  typeIndex: number = 0;
+  currentType: string = '';
+  intervalId: any;
 
   constructor(private route: ActivatedRoute, private dataService: DataService, private el: ElementRef) {
     var slug = this.route.snapshot.paramMap.get('title')
     this.data = this.dataService.data.find(d => d.page == slug);
+    this.work = this.dataService.work.find(d => d.service_name == slug);
   }
 
   ngAfterViewInit(): void {
@@ -48,5 +54,22 @@ export class ServiceOverviewComponent implements AfterViewInit {
       });
     });    
   }
+
+
+ngOnInit() {
+  if (this.work?.types?.length > 0) {
+    this.currentType = this.work.types[0];
+    this.intervalId = setInterval(() => this.rotateType(), 1500); // every 1.5 sec
+  }
+}
+
+rotateType() {
+  this.typeIndex = (this.typeIndex + 1) % this.work.types.length;
+  this.currentType = this.work.types[this.typeIndex];
+}
+
+ngOnDestroy() {
+  if (this.intervalId) clearInterval(this.intervalId);
+}
 
 }

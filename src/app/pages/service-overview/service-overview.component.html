@@ -22,3 +22,31 @@
         </p>
     </div>
 </section>
+
+<section class="our-work-section">
+    <div class="work-header">
+      <div class="work-left">
+        <h1>OUR WORK</h1>
+      </div>
+      <div class="work-right">
+        <a routerLink="/works">
+            <h5>See all work →</h5>
+        </a>          
+      </div>
+    </div>
+  
+    <div class="work-images">
+      <div *ngFor="let item of work.media.slice(0, 3)" class="work-image">
+        <img [src]="item.image" alt="work" />
+        <span class="card-brand">{{ item.brand }}</span>
+        <h3 class="card-title">{{ item.title }}</h3>
+        <!-- <div *ngFor="let type of work.types">
+            <p class="card-meta">{{ type }}</p>
+        </div> -->
+        <div class="type-wrapper animate-type">
+            <p class="card-meta">{{ currentType }}</p>
+        </div>          
+      </div>
+    </div>
+  </section>
+  
