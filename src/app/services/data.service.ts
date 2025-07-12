@@ -229,19 +229,24 @@ export class DataService {
       ],
       media :[
         {
-          brand: "JAMESON",
-          title: "Pioneering a new sound frontier",
+          brand: "SAMSONITE",
+          title: "An always-on influencer strategy to redefine social presence",
+          image: "https://unsplash-assets.imgix.net/marketing/studio/light-guy.jpg?w=800&dpr=2&auto=format&fit=crop&q=60",
+        },
+        {
+          brand: "BULGARI",
+          title: "Creating a distinct experience for an iconic luxury brand",
+          image: "https://unsplash-assets.imgix.net/marketing/studio/deck/1.jpg?w=336&dpr=2&q=80&h=441&auto=format&fit=crop",
+        },
+        {
+          brand: "HEINEKEN",
+          title: "Bringing Heineken's 'WYDND' to life at the inaugural Miami grand prix",
           image: "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s",
         },
         {
-          brand: "JAMESON",
-          title: "Pioneering a new sound frontier",
-          image: "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s",
-        },
-        {
-          brand: "JAMESON",
-          title: "Pioneering a new sound frontier",
-          image: "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s",
+          brand: "KLOPP",
+          title: "From Klopp to communities, refining fitness accessibility",
+          image: "https://images.unsplash.com/photo-1553531087-b25a0b9a68ab?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         }
       ]
     },
@@ -256,19 +261,19 @@ export class DataService {
       ],
       media :[
           {
-            "brand": "AUSTRALIAN RED CROSS LIFEBLOOD",
-            "title": "Turning motivational stories into a powerful call to action",
-            "image": "https://media.istockphoto.com/id/1276936264/photo/creative-background-online-casino-in-a-mans-hand-a-smartphone-with-playing-cards-roulette-and.jpg?s=1024x1024&w=is&k=20&c=I7X3V_gVoNP3s3Oh6KUDpCXKd48qsKfbaH3YhNpAmho=",
+            "brand": "SEPHORA",
+            "title": "From super hype to hyper local: Sephora’s UK launch strategy",
+            "image": "https://unsplash-assets.imgix.net/marketing/studio/deck/6.jpg?w=336&dpr=2&q=80&h=441&auto=format&fit=crop",
           },
           {
             "brand": "AUSTRALIAN RED CROSS LIFEBLOOD",
             "title": "Turning motivational stories into a powerful call to action",
-            "image": "https://media.istockphoto.com/id/1276936264/photo/creative-background-online-casino-in-a-mans-hand-a-smartphone-with-playing-cards-roulette-and.jpg?s=1024x1024&w=is&k=20&c=I7X3V_gVoNP3s3Oh6KUDpCXKd48qsKfbaH3YhNpAmho=",
+            "image": "https://images.unsplash.com/photo-1564419320415-7f119406236e?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           },
           {
-            "brand": "AUSTRALIAN RED CROSS LIFEBLOOD",
-            "title": "Turning motivational stories into a powerful call to action",
-            "image": "https://media.istockphoto.com/id/1276936264/photo/creative-background-online-casino-in-a-mans-hand-a-smartphone-with-playing-cards-roulette-and.jpg?s=1024x1024&w=is&k=20&c=I7X3V_gVoNP3s3Oh6KUDpCXKd48qsKfbaH3YhNpAmho=",
+            "brand": "THE NORTH FACE",
+            "title": "Reinforcing leadership in the outdoors",
+            "image": "https://unsplash-assets.imgix.net/marketing/studio/deck/2.jpg?w=336&dpr=2&q=80&h=441&auto=format&fit=crop",
           }
         ]
     },
@@ -281,19 +286,19 @@ export class DataService {
       ],
       media :[
         {
-          "brand": "THE NORTH FACE",
-          "title": "Reinforcing leadership in the outdoors",
-          "image": "https://fastly.picsum.photos/id/54/3264/2176.jpg?hmac=blh020fMeJ5Ru0p-fmXUaOAeYnxpOPHnhJojpzPLN3g",
+          "brand": "WOOLWORTHS",
+          "title": "Woolworths Australia proves that fresh fuels the best in all of us",
+          "image": "https://images.unsplash.com/photo-1542838687-0dff2d518abf?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         {
-          "brand": "THE NORTH FACE",
-          "title": "Reinforcing leadership in the outdoors",
-          "image": "https://fastly.picsum.photos/id/54/3264/2176.jpg?hmac=blh020fMeJ5Ru0p-fmXUaOAeYnxpOPHnhJojpzPLN3g",
+          "brand": "LNER",
+          "title": "Eleanor & LNER: Reinventing rail travel with joy and connection",
+          "image": "https://images.unsplash.com/photo-1633113215937-18127a49a8a4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         },
         {
-          "brand": "THE NORTH FACE",
-          "title": "Reinforcing leadership in the outdoors",
-          "image": "https://fastly.picsum.photos/id/54/3264/2176.jpg?hmac=blh020fMeJ5Ru0p-fmXUaOAeYnxpOPHnhJojpzPLN3g",
+          "brand": "CONTINENTAL",
+          "title": "A premium partnership build on performance",
+          "image": "https://images.unsplash.com/photo-1649972904914-5d5aaf3d1793?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         }
       ]
     },
@@ -307,19 +312,19 @@ export class DataService {
       ],
       media :[
         {
-          "brand": "PELOTON",
-          "title": "From Klopp to communitites, refining fitness accessibility",
-          "image": "https://fastly.picsum.photos/id/41/1280/805.jpg?hmac=W9CWeYdlZisqEfhjuODl83T3lCXAqjUZrOe9iMFPYmI"
+          "brand": "CARRERA",
+          "title": "Turning a brand with history into a powerful story",
+          "image": "https://images.unsplash.com/photo-1682687220305-ce8a9ab237b1?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
-          "brand": "PELOTON",
-          "title": "From Klopp to communitites, refining fitness accessibility",
-          "image": "https://fastly.picsum.photos/id/41/1280/805.jpg?hmac=W9CWeYdlZisqEfhjuODl83T3lCXAqjUZrOe9iMFPYmI"
+          "brand": "AMAZON",
+          "title": "Transforming data into actionable intelligence",
+          "image": "https://images.unsplash.com/photo-1683009427619-a1a11b799e05?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
-          "brand": "PELOTON",
-          "title": "From Klopp to communitites, refining fitness accessibility",
-          "image": "https://fastly.picsum.photos/id/41/1280/805.jpg?hmac=W9CWeYdlZisqEfhjuODl83T3lCXAqjUZrOe9iMFPYmI"
+          "brand": "LEGO",
+          "title": "Creative collaboration builds cultural powerhouse",
+          "image": "https://images.unsplash.com/photo-1682695796497-31a44224d6d6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
       ]
     },

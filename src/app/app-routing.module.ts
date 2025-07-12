@@ -10,6 +10,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { ContactFormComponent } from './pages/contact-form/contact-form.component';
 import { ServiceOverviewComponent } from './pages/service-overview/service-overview.component';
 import { ServiceTypeComponent } from './pages/service-type/service-type.component';
+import { JobOpeningsComponent } from './pages/job-openings/job-openings.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'works', component: WorksComponent },
   { path: 'about', component: AboutComponent },
   { path: 'careers', component: CareersComponent },
+  { path: 'careers/job-openings', component: JobOpeningsComponent },
   { path: 'updates', component: UpdatesComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'services/:title', component: ServiceOverviewComponent },

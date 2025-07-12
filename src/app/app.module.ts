@@ -18,6 +18,7 @@ import { ContactFormComponent } from './pages/contact-form/contact-form.componen
 import { ServicesComponent } from './pages/services/services.component';
 import { ServiceOverviewComponent } from './pages/service-overview/service-overview.component';
 import { ServiceTypeComponent } from './pages/service-type/service-type.component';
+import { JobOpeningsComponent } from './pages/job-openings/job-openings.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ServiceTypeComponent } from './pages/service-type/service-type.componen
     ContactFormComponent,
     ServicesComponent,
     ServiceOverviewComponent,
-    ServiceTypeComponent
+    ServiceTypeComponent,
+    JobOpeningsComponent
   ],
   imports: [
     BrowserModule,
