@@ -24,7 +24,7 @@
 }
 
 /* Show only in mobile view */
-@media (max-width: 768px) {
+@media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
   .mobile-home {
     display: block;
   }
@@ -46,7 +46,7 @@
     max-width: 300px;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
     .navbar {
       padding-left: 0 !important;  /* override padding if needed */
     }
@@ -188,7 +188,7 @@
   /* ───────────────────────────────
      7.  Mobile (≤768 px)
      ─────────────────────────────── */
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
     /* stack nav links vertically in an off‑canvas panel */
     .nav-links {
       flex-direction: column;
@@ -222,7 +222,7 @@
   
 
   /* ==========  MOBILE fine‑tuning  ========== */
-@media (max-width: 768px) {
+@media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
 
   .navbar.open .nav-links {
     display: flex;

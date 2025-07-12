@@ -50,7 +50,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
     .hero-section:first-of-type {
       margin-top: 80px;
     }
@@ -90,7 +90,7 @@
   }
   
   /* Responsive tweak */
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
     .intro-wrapper {
       flex-direction: column;
     }
@@ -170,7 +170,7 @@
   }
   
   
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
     .original-wrapper {
       flex-direction: column;
     }
@@ -241,8 +241,13 @@
     transform-origin: top left;
   }
   
-  /* Responsive tweak */
   @media (max-width: 768px) {
+    .info-left h1 {
+      font-size: 2.5rem;
+    }
+  }
+  /* Responsive tweak */
+  @media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
     .info-wrapper {
       flex-direction: column;
     }
@@ -254,10 +259,6 @@
 
     .info-left {
       flex: 1 1 100%;
-    }
-  
-    .info-left h1 {
-      font-size: 2.5rem;
     }
 
     .info-right {
@@ -335,7 +336,7 @@
 }
 
 /* Responsive: Stack on small screens */
-@media (max-width: 768px) {
+@media (max-width: 768px){
   .leader-grid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -377,7 +378,7 @@
   }
   
   /* Optional responsive tweak */
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
     .carousel-img {
       width: 60vw;
     }
@@ -432,7 +433,7 @@
     display: block;
   }
 
-  @media (max-width: 768px) {  
+  @media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {  
     .original-left h5 {
       font-size: 30px;
       letter-spacing: -1px;

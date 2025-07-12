@@ -59,7 +59,7 @@
     font-weight: 500;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
     .work-wrapper {
       flex-direction: column;
     }
@@ -95,7 +95,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
   }
   
   .work-card {
@@ -212,7 +211,7 @@
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (min-width: 768px) and (max-width: 1024px) {
   .custom-select-wrapper select {
     padding: 0.75rem 3.0rem;
     font-size: 12px;
