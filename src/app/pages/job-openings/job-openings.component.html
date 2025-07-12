@@ -59,7 +59,7 @@
         <div class="job-popup" (click)="$event.stopPropagation()">
           <button class="close-btn" (click)="closePopup2()">×</button>
       
-          <h2>Apply for {{ applyJob?.title }}</h2>
+          <h3 class="job-heading">Apply for {{ applyJob?.title }}</h3>
       
           <div *ngIf="thankYou" class="thank-you-message">
             <p>Thank you! We’ll get back to you soon.</p>

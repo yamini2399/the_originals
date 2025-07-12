@@ -256,6 +256,7 @@
   
   .job-popup form label {
     font-weight: bold;
+    font-size: 12px;
     color: #454444;
   }
   .job-popup form input,
@@ -284,6 +285,10 @@
 .invalid file,
 .invalid textarea {
   border: 2px solid #ed706e !important;
+}
+
+.job-heading{
+  margin-top: -5px;
 }
 
 /* Error message for required fields */
