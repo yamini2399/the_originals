@@ -164,27 +164,7 @@
       margin-left: 0;
     }
   }
-  
 
-  .job-popup-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-  }
-  
-  .job-popup {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  }
   
   .close-btn {
     position: absolute;
@@ -250,13 +230,13 @@
   .job-popup-backdrop {
     position: fixed;
     inset: 0;
-    /* background: rgba(0, 0, 0, 0.5); */
+    background: rgba(0, 0, 0, 0.5);
     overflow-y: auto; /* ✅ allow scrolling if content is too tall */
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem; /* ✅ add padding to prevent sticking to edges */
-    z-index: 999;
+    z-index: 1005;
   }
   
   .job-popup {
